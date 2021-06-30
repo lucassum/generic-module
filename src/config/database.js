@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
 mongoose.connect(
-  'mongodb://localhost:27018/generic_module',
+  'mongodb://localhost:27017/generic_module',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    useCreateIndex: true
+    useCreateIndex: true,
+    dbName: 'generic'
   },
   (error) => {
     if (error)

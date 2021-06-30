@@ -5,6 +5,6 @@ const routes = require("./routes")
 const Router = require('express').Router()
 
 routes.forEach(route => {
-    RouteGenerator.generateRoutes({ Router, route, action: require('./actions')[route.action](Model) })
+    RouteGenerator.generateRoutes({ Router, route, action: require(`./actions/${route.action}`)(Model) })
 })
 module.exports = Router 

@@ -12,7 +12,7 @@ module.exports = [
     {
         method: 'get',
         path: '/:id',
-        action: 'findById',
+        action: 'read',
     },
     {
         method: 'put',
